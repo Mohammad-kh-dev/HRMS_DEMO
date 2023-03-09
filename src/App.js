@@ -1,24 +1,41 @@
-import logo from './logo.svg';
-import './App.css';
+/* eslint-disable no-unused-vars */
+import React from "react";
+
+import { Dashborad } from "./pages/Dashborad";
+import { Routes,Route } from "react-router";
+import { Layout } from "./pages/Layout";
+import LoginForm from "./auth/Forms/LoginForm";
+import { useSelector } from "react-redux";
+import Profile from "./pages/Profile";
+import { PrivateRoute } from "./utils/PrivateRoute";
 
 function App() {
+  
+
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <Routes>
+   
+      <Route element={<PrivateRoute/>}>
+      <Route path="/" element={<Layout/>}>
+        <Route index path="/home" element={<Dashborad/>}/>
+        <Route path="/profile" element={<Profile/>}/>
+        </Route>      
+      
+
+      </Route>
+      <Route path="/login" element={<LoginForm/>}/>     
+     
+    </Routes>
+    
+    </>
+
+  
+  
+     
+    
   );
 }
 
