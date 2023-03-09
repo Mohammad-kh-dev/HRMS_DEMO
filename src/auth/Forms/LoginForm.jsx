@@ -16,7 +16,7 @@ const LoginForm = () => {
 
   useEffect(()=>{
     if(isuser !== null){
-      navigate("/")
+     window.location.href="/"
     } else redirect("/login")
   })
   const handleSubmit =  async (event) => {

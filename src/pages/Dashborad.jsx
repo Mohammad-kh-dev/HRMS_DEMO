@@ -1,15 +1,14 @@
+/* eslint-disable no-template-curly-in-string */
 /* eslint-disable jsx-a11y/anchor-has-content */
 /* eslint-disable jsx-a11y/img-redundant-alt */
 /* eslint-disable no-script-url */
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react'
 
-
-
 export const Dashborad = () => {
   return (
     <>
-    
+   
    <div className="content-wrapper">
   <div className="container-fluid">
     <div className="row">
@@ -558,6 +557,7 @@ export const Dashborad = () => {
     {/* /.row (main row) */}
   </div>{/* /.container-fluid */}
 </div>
+
 
 </>
 

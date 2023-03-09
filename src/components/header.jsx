@@ -3,7 +3,7 @@ import React from 'react'
 import { Button } from '@mui/material';
 const handleOut = () =>{
  localStorage.removeItem("accessJWT")
- window.location.reload(true)
+ window.location.reload()
 }
 const header = () => {
   return (

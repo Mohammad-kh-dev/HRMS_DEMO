@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 /*!
  * JQVMap: jQuery Vector Map Library
  * @author JQVMap <me@peterschmalfeldt.com>

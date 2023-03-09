@@ -6,7 +6,8 @@ import { Fotter } from '../components/fotter'
 export const Layout = () => {
   return (
     <>
-    <div class="wapper">
+    {/*<link rel="stylesheet" href="%PUBLIC_URL%/plugins/jqvmap/jqvmap.min.css"/> */}
+    <div className="wapper">
     <Header/>
     <SideBar/>
     <Outlet/>

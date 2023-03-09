@@ -1,10 +1,23 @@
+/* eslint-disable react/jsx-no-undef */
+/* eslint-disable no-template-curly-in-string */
 /* eslint-disable react/style-prop-object */
 /* eslint-disable jsx-a11y/img-redundant-alt */
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React from 'react'
-import { NavLink } from 'react-router-dom'
+
+import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
+
 
 function SideBar() {
+  const [active_item,set_active_item] = useState("");
+  
+  const handleItemClick = (event) => {
+    
+    
+    
+    set_active_item(event.target.id);
+    
+  };
   return (
     <aside className="main-sidebar sidebar-dark-primary elevation-4">
   <a href="index3.html" className="brand-link">
@@ -33,7 +46,7 @@ function SideBar() {
     <nav className="mt-2">
       <ul className="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
         <li className="nav-item menu-open">
-          <a href="#" className="nav-link active">
+          <a href="/" className="nav-link active">
             <i className="nav-icon fas fa-tachometer-alt" />
             <p>
               Dashboard
@@ -46,14 +59,16 @@ function SideBar() {
      
             
       
-            <NavLink to="/home">
-            <li className="nav-item">
-              <a className="nav-link">
-                <i className="far fa-circle nav-icon" />
+            <li className='nav-item '>
+              <a  className={`nav-link ${active_item === "dashboard" ? "active" : ""}`} href="/"  id='dashboard' onClick={handleItemClick}>
+                <i className="far  nav-icon" />
                 <p>Dashboard v3</p>
               </a>
-            </li>
-            </NavLink>
+            </li> 
+            
+                     
+            
+            
            
           </ul>
         </li>
@@ -349,19 +364,19 @@ function SideBar() {
           </a>
           <ul className="nav nav-treeview">
             <li className="nav-item">
-              <a href="pages/examples/invoice.html" className="nav-link">
+              <a href="/invoice" className="nav-link">
                 <i className="far fa-circle nav-icon" />
                 <p>Invoice</p>
               </a>
             </li>
-            <NavLink to="/profile">
+            
             <li className="nav-item">
-              <a className="nav-link">
+              <Link className="nav-link" to="/profile">
                 <i className="far fa-circle nav-icon" />
                 <p>Profile</p>
-              </a>
+              </Link>
             </li>
-            </NavLink>
+            
             <li className="nav-item">
               <a href="pages/examples/e-commerce.html" className="nav-link">
                 <i className="far fa-circle nav-icon" />
