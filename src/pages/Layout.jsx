@@ -8,6 +8,7 @@ export const Layout = () => {
     <>
     <div class="wapper">
     <Header/>
+    <SideBar/>
     <Outlet/>
    
     
